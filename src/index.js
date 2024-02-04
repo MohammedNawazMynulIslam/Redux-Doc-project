@@ -3,11 +3,12 @@ import { createRoot } from 'react-dom/client'
 import { Provider } from 'react-redux'
 
 import App from './App'
-import { store } from './app/store'
+
 
 import './index.css'
 
 import { worker } from './api/server'
+import store from './app/store'
 
 // Wrap app rendering so we can wait for the mock API to initialize
 async function start() {

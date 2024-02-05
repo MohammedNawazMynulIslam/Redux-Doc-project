@@ -10,19 +10,13 @@ export const AddPostForm = () => {
     const onTitleChanged = e=>setTitle(e.target.value)
     const onContentChanged = e=>setContent(e.target.value)
 
-    const onSavePostClicked = ()=>{
-        if (title && content){
-            // console.log(`saving ${title}`)
-            dispatch(
-                postAdded({
-                    id:nanoid(),
-                    title,
-                    content
-                })
-            )
-            setTitle(' ')
-            setContent(' ')
-    }}
+const onSavePostClicked=()=>{
+  if (title && content){
+    dispatch(postAdded(title,content))
+    setContent("")
+    setTitle("")
+}
+}
   return (
     <section>
         <h2>Add a new Post</h2>

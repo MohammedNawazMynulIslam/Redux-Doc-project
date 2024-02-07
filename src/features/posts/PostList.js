@@ -18,7 +18,7 @@ import { PostAuthor } from './PostAuthor'
         }
         </p>
         }
-        <PostAuthor  key={posts.id} userId={posts.user}/>
+         <PostAuthor userId={post.user}/>
         <br/>
 
       <Link to={`/posts/${post.id}`} className="button muted-button">View Post
